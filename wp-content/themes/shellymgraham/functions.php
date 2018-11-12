@@ -182,6 +182,12 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 		wp_register_script( 'hoverintent-js', get_template_directory_uri() . '/assets/js/vendor/hoverintent/jquery.hoverIntent.js', array( 'jquery' ), '1.0.0', true );
 		wp_enqueue_script( 'hoverintent-js' );
 
+		wp_register_script( 'slick_js', get_template_directory_uri() . '/assets/js/vendor/slick.min.js', array( 'jquery' ), '1.8.1', true );
+		wp_enqueue_script( 'slick_js' );
+
+		wp_register_script( 'app_js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '1.0', true );
+		wp_enqueue_script( 'app_js' );
+		
 		// Dashicons
 		wp_enqueue_style( 'dashicons' );
 
@@ -218,6 +224,12 @@ if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
 			);
 			wp_enqueue_style( 'some_like_it_neat-style' );
 		endif;
+
+			wp_register_style(
+				'slick_css', // handle name
+				get_template_directory_uri() . '/assets/css/slick.css', '', '1.8.1', 'screen'
+			);
+			wp_enqueue_style( 'slick_css' );
 	}
   add_action( 'wp_enqueue_scripts', 'some_like_it_neat_styles' );
 

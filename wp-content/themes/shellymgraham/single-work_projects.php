@@ -9,34 +9,48 @@ get_header(); ?>
 
 <div id="intro" class="project">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
 	<div class="intro-container">
 
 		<h2><?php the_title(); ?></h2>
+		
 		<?php the_content(); ?>
+		
+		<?php if( get_field('site_url')) { ?>
+		
+			<a href="<?php echo get_field('site_url'); ?>" target="_blank"><span>Visit Site</span></a>
+				
+		<?php } ?>
 
 	</div>
-	
-		<?php if( get_field('site_url')) { ?>
-	
-		<div class="media-container">
-	
-			<a href="<?php echo get_field('site_url'); ?>" target="_blank"><?php the_post_thumbnail('tablet'); ?><span>Visit Site</span></a>
-	
-		</div>
 		
-		<?php } else { ?>
+	<div class="media-container">
+							
+		<?php if( have_rows('image_slider') ): ?>
+				
+			<div class="work-slider">
 		
-		<div class="media-container">
+		    <?php while ( have_rows('image_slider') ) : the_row();
+		
+		        $image = get_sub_field('ind_image');
+				$size = 'full'; // (thumbnail, medium, large, full or custom size)
+				
+				if( $image ) {
+				
+					echo wp_get_attachment_image( $image, $size );
+				
+				}
+		
+		    endwhile; ?>
+		    
+			</div>
+			
+		<?php endif; ?>
+
+	</div>		
 	
-			<?php the_post_thumbnail('tablet'); ?>
-	
-		</div>		
-	
-		<?php } ?>
-	
-		<?php endwhile; // end of the loop. ?>
+	<?php endwhile; // end of the loop. ?>
 
 </div>
 <section id="more-projects">

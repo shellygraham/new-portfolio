@@ -208,10 +208,14 @@ body #intro .intro-container p{font-size:24px;line-height:40px;color:#464645}@me
 body #intro.project .intro-container:last-child{margin-right:0}@media all and (max-width:799px){body #intro.project .intro-container{float:left;display:block;margin-right:2.12766%;width:100%;margin-left:0;padding:0 10px;margin-bottom:20px}
 body #intro.project .intro-container:last-child{margin-right:0}}body #intro.project .intro-container h2{font-family:"futura-pt",sans-serif;color:#464645}
 body #intro.project .intro-container ul{margin-bottom:30px}body #intro.project .intro-container ul li{font-size:22px;color:#464645;line-height:32px}
+body #intro.project .intro-container a span{text-decoration:none;display:inline-block;padding:14px 24px;margin:37px auto 14px auto;background:#e26d06;color:#464645;width:auto;font-family:"futura-pt",sans-serif;font-size:18px;font-weight:400;letter-spacing:1px;text-transform:uppercase;transition:all .5s linear}
+body #intro.project .intro-container a:hover span{background:#c06718;color:#464645;transition:all .5s linear}
 body #intro.project .media-container{float:left;display:block;margin-right:2.12766%;width:40.42553%;margin-left:8.51064%;margin-right:0}
 body #intro.project .media-container:last-child{margin-right:0}@media all and (max-width:799px){body #intro.project .media-container{float:left;display:block;margin-right:2.12766%;width:82.97872%;margin-left:8.51064%;margin-right:0;padding:0 10px}
 body #intro.project .media-container:last-child{margin-right:0}body #intro.project .media-container img{margin:0 auto;display:block;max-width:100%;height:auto;max-height:none}
-}body #intro.project .media-container a span{text-decoration:none;display:inline-block;padding:14px 24px;margin:37px auto 14px auto;background:#e26d06;color:#464645;width:auto;font-family:"futura-pt",sans-serif;font-size:18px;font-weight:400;letter-spacing:1px;text-transform:uppercase;transition:all .5s linear}
+}body #intro.project .media-container .slick-slider{padding-bottom:40px}body #intro.project .media-container .slick-slider .slick-prev,body #intro.project .media-container .slick-slider .slick-next{position:absolute;top:50%;left:-104px;background:transparent}
+body #intro.project .media-container .slick-slider .slick-next{right:-70px;left:auto}
+body #intro.project .media-container a span{text-decoration:none;display:inline-block;padding:14px 24px;margin:37px auto 14px auto;background:#e26d06;color:#464645;width:auto;font-family:"futura-pt",sans-serif;font-size:18px;font-weight:400;letter-spacing:1px;text-transform:uppercase;transition:all .5s linear}
 body #intro.project .media-container a:hover span{background:#c06718;color:#464645;transition:all .5s linear}
 body #intro.resume h2{font-family:"bodoni-urw",serif;font-size:42px;color:#a33b20}
 body #intro.resume h3{font-family:"bodoni-urw",serif;font-size:26px}

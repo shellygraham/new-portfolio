@@ -6,34 +6,41 @@ $raisin: #441D31;
 $med-raisin: #723153;
 $charcoal: rgba(52, 64, 85, 1);
 $green: rgba(71, 74, 44, 1);
-$red: rgba(163, 59, 32, 1);
+$red: rgba(163, 59, 32, 1); //a33b20
 $raspberry: rgba(121, 35, 89, 1);
 $grey: rgba(229, 222, 223, 1);
 $lt-raisin: #c4b7bc;
 $pale-lavender: #e5dedf;
 
-// Fonts
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,800|Lora:400,700';
+$vanilla: #efefe7;
+$umber: #c06718;
+$lt-umber: #e26d06;
+$burnt-umber: #a24e04;
+$pewter: #464645;
 
-$body: 'Open Sans', sans-serif;
-$title: 'Lora', serif;
-$copy: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// Fonts
+$title: "futura-pt",sans-serif;
+$titlebold: "futura-pt-bold",sans-serif;
+$body: "bodoni-urw",serif;
+$copy: "bodoni-urw",serif;
 
 body {
-	background: $grey;
+	background: $vanilla;
 	font-family: $body;
-	color: $raisin;
+	color: $pewter;
 	
 	h1 {
-		font-family: $body;
-		font-weight: 800;
+		font-family: $title;
+		font-weight: 400;
+		color: $umber;
 	}
 	h2, h3, h4, h5, h6 {
 		font-family: $title;
-		font-weight: 700;
+		font-weight: 400;
+		color: $umber;
 	}
 	h2 {
-		font-size: 40px;
+		font-size: 46px;
 		
 		@media all and (max-width: 799px) {
 			font-size: 32px;
@@ -60,7 +67,7 @@ body {
 			 	text-transform: uppercase;
 			 	font-size: 20px;
 			 	font-weight: 900;
-			 	color: $raisin;
+			 	color: $pewter;
 			 	display: inline-block;
 			 	padding-left: 14px;
 			 	transition: all 0.5s linear;
@@ -68,7 +75,7 @@ body {
 			 		padding-left: 18px;
 			 	}
 				&:hover {
-					color: #c5b7bc;
+					color: rgba(70,70,69,0.4) !important;
 					transition: all 0.5s linear;
 				}
 			}		 	
@@ -91,7 +98,7 @@ body {
 			}
 			button {
 				background: none;
-				color: $raisin;
+				color: $pewter;
 				padding: 10px 0 0 0;
 				outline: 0;
 			}
@@ -105,30 +112,32 @@ body {
 				 	li {
 					 	background: none;
 					 	a {
-						 	font-family: $body;
+						 	font-family: $title;
 						 	text-transform: uppercase;
 						 	font-weight: 800;
 						 	transition: all 0.5s linear;
-						 	background: $raisin;
+						 	background: $umber;
+						 	color: $pewter;
 						 	
 						 	@media all and (max-width: 799px) {
-							 	color: $pale-lavender;
+							 	color: $pewter;
+							 	background: $lt-umber;
 						 	}
 						 	&:hover {
-							 	color: $lt-raisin;
+							 	color: rgba(70,70,69,0.4) !important;
 							 	transition: all 0.5s linear;
 							 	text-decoration: none;
 							 	
 							 	@media all and (max-width: 799px) {
-								 	background: $lt-raisin;
-								 	color: $raisin !important;
+								 	background: #c06718;
+								 	color: $pewter !important;
 							 	}
 						 	}
 					 	}
 					 	@media all and (min-width: 800px) {
 					 		width: auto;
 					 		a {
-						 		color: $raisin;
+						 		color: $pewter;
 						 		background: none;
 						 		border-bottom: 0;
 						 		padding: 15px 18px;
@@ -148,7 +157,7 @@ body {
 	}
 	#main {
 		padding: 0;
-		background: $pale-lavender;
+		background: $vanilla;
 	}
 	&.home {
 		#main {
@@ -166,13 +175,13 @@ body {
 		background-size: 200%;
 	}
 	#intro-wrapper {
-		background: $pale-lavender;
+		background: $vanilla;
 	}
 	#intro {
 		@include outer-container;
 		text-align: center;
 		padding: 100px 0 30px 0;
-		color: $med-raisin;
+		color: $umber;
 		
 		@media all and (max-width: 799px) {
 			padding: 0 0 30px 0;
@@ -183,11 +192,12 @@ body {
 			@include shift(1);
 			@include omega();
 			h2 {
-				color: $raisin;
+				color: $umber;
 			}
 			p {
 				font-size: 24px;
 				line-height: 40px;
+				color: $pewter;
 				
 				@media all and (max-width: 799px) {
 				    font-size: 22px;
@@ -211,7 +221,39 @@ body {
 				
 				h2 {
 					font-family: $title;
-					color: $raisin;
+					color: $pewter;
+				}
+				ul {
+					margin-bottom: 30px;
+					li {
+						font-size: 22px;
+						color: $pewter;
+						line-height: 32px;
+					}					
+				}
+				a {
+					span {	
+						text-decoration: none;
+					    display: inline-block;
+					    padding: 14px 24px;
+					    margin: 37px auto 14px auto;
+					    background: $lt-umber;
+					    color: $pewter;
+					    width: auto;
+					    font-family: $title;
+						font-size: 18px;
+						font-weight: 400;
+						letter-spacing: 1px;
+						text-transform: uppercase;
+						transition: all 0.5s linear;
+				    }
+				    &:hover {
+					    span {
+						    background: $umber;
+						    color: $pewter;
+						    transition: all 0.5s linear;
+					    }
+				    }
 				}
 			}
 			.media-container {
@@ -220,14 +262,31 @@ body {
 				@include omega();
 				
 				@media all and (max-width: 799px) {
-					@include span-columns(12);
-					@include shift(0);
+					@include span-columns(10);
+					@include shift(1);
 					@include omega();
 					padding: 0 10px;
 					img {
 						margin: 0 auto;
 						display: block;
+						max-width: 100%;
+						height: auto;
+						max-height: none;
 					}				
+				}
+				
+				.slick-slider {
+					padding-bottom: 40px;
+					.slick-prev, .slick-next {
+						position: absolute;
+					    top: 50%;
+					    left: -104px;
+					    background: transparent;
+					}
+					.slick-next {
+					    right: -70px;
+					    left: auto;
+					}
 				}
 				
 				a {
@@ -236,20 +295,20 @@ body {
 					    display: inline-block;
 					    padding: 14px 24px;
 					    margin: 37px auto 14px auto;
-					    background: $raisin;
-					    color: $pale-lavender;
+					    background: $lt-umber;
+					    color: $pewter;
 					    width: auto;
-					    font-family: $copy;
-						font-size: 16px;
-						font-weight: 900;
+					    font-family: $title;
+						font-size: 18px;
+						font-weight: 400;
 						letter-spacing: 1px;
 						text-transform: uppercase;
 						transition: all 0.5s linear;
 				    }
 				    &:hover {
 					    span {
-						    background: rgba(68,29,49,.2);
-						    color: $raisin;
+						    background: $umber;
+						    color: $pewter;
 						    transition: all 0.5s linear;
 					    }
 				    }
@@ -260,7 +319,7 @@ body {
 			h2 {
 				font-family: $body;
 				font-size: 42px;
-				color: $raisin;
+				color: $red;
 			}
 			h3 {
 				font-family: $body;
@@ -268,24 +327,34 @@ body {
 			}
 			h4 {
 				font-family: $body;
-				font-size: 20px;
+				font-size: 22px;
 				text-transform: none;
-				margin: 10px 0;
+				margin: 10px 0 5px 0;
 			}
 			h5 {
 				font-family: $body;
-			    font-size: 16px;
+			    font-size: 18px;
 			    text-transform: none;
-			    margin: 10px 0 10px 0;				
+			    margin: 0 0 10px 0;				
 			}
 			ul {
 				margin-bottom: 24px;
+				li {
+					font-family: $title;
+					color: $pewter;
+					font-size: 18px !important;
+					line-height: 26px !important;
+				}
+			}
+			p {
+				font-size: 18px;
+				line-height: 26px;
 			}
 			a {
-				color: $med-raisin;
+				color: $pewter;
 				transition: all 0.5s linear;
 				&:hover {
-					color: $lt-raisin;
+					color: $burnt-umber;
 					text-decoration: none;
 					transition: all 0.5s linear;
 				}
@@ -305,8 +374,10 @@ body {
 				@include span-columns(6);
 				@include shift(1);
 				p {
-					font-size: 16px;
-					line-height: 24px;					
+					font-size: 18px;
+					line-height: 26px;
+					font-family: $title;
+					color: $pewter;
 				}
 
 				@media all and (max-width: 800px) {
@@ -316,7 +387,12 @@ body {
 			}
 			.side-container {
 				@include span-columns(3);	
-				text-align: left;	
+				text-align: left;
+				
+				p {
+					font-family: $title;
+					color: $pewter;
+				}	
 						
 				@media all and (max-width: 800px) {
 					@include span-columns(12);
@@ -327,17 +403,15 @@ body {
 		}
 	}
 	#skills-wrapper {
-		background: $raisin;
+		background: $red;
 	}
 	#skills {
 		padding: 35px 0 60px 0;
-		color: $pale-lavender;
+		color: $vanilla;
 		
 		@media all and (max-width: 799px) {
 			padding: 35px 0 20px 0;
-		}
-
-		
+		}		
 		.skills-container {
 			@include outer-container;
 			text-align: center;
@@ -346,6 +420,7 @@ body {
 				h2 {
 					text-align: center;
 					margin-bottom: 44px;
+					color: $lt-umber;
 				}
 				ul {
 					width: 100%;
@@ -354,9 +429,17 @@ body {
 						width: 18%;
 						margin-left: 7%;
 						list-style: none;
-						font-weight: 600;
-						line-height: 26px;
+						font-weight: 400;
+						line-height: 28px;
 						text-align: left;
+						font-family: $title;
+						font-size: 20px;
+						a {
+							&:hover {
+								color: rgba(70,70,69,0.4);
+								text-decoration: none;
+							}
+						}
 						
 						@media all and (max-width: 799px) {
 						    width: 27%;
@@ -373,23 +456,31 @@ body {
 					}
 				}
 			}
+		}
+		#cta {
+			margin-top: 60px;
+			background: transparent;
 			a {
 				text-decoration: none;
 			    display: inline-block;
-			    color: $raisin;
+			    color: $pewter;
 			    width: auto;
 			    transition: all 0.5s linear;
 			    letter-spacing: 1px;
+			    margin-bottom: 10px;
+			    background: $lt-umber;
 			    h3 {
-				    font-family: $copy;
-					font-size: 16px;
+				    font-family: $title;
+					font-size: 18px;
 					margin: 16px 0;
+					color: $pewter;
 			    }
 			    &:hover {
-				    color: $lt-raisin;
+				    color: $pewter;
 				    transition: all 0.5s linear;
+				    background: $umber;
 			    }					
-			}
+			}	
 		}
 		&.alt {
 			padding-top: 0;
@@ -399,7 +490,7 @@ body {
 			}
 
 			h2 {
-				color: $raisin;
+				color: $pewter;
 				margin-top: 0;
 			}
 			.skills-container {
@@ -432,13 +523,13 @@ body {
 		}
 	}
 	#work-wrapper {
-		background: $pale-lavender;
+		background: $vanilla;
 	}
 	#work {
 		padding: 35px 0 0 0;
-		color: $raisin;
+		color: $pewter;
 		text-align: center;
-		background: $pale-lavender;
+		background: $vanilla;
 		.work-container {
 			@include outer-container;
 			width: 100%;
@@ -447,7 +538,7 @@ body {
 				h2 {
 					text-align: center;
 					margin-bottom: 60px;
-					color: $raisin;
+					color: $pewter;
 				}
 			}
 		}
@@ -485,56 +576,79 @@ body {
 				font-weight: 600;
 				line-height: 26px;
 				float: left;
-				background: $pale-lavender;
 				margin-bottom: 60px;
 				transition: all 0.5s linear;
 				overflow: hidden;
 				backface-visibility: hidden;
-				position: relative;				
+				position: relative;			
+				border-right: 1px solid $vanilla;
+				overflow: hidden;
+				&:nth-child(3n) {
+					border-right: 1px solid #c06718;
+				}
 				&:nth-child(3) {
 					@include reset-display;
 				}
 
-				@media all and (max-width: 799px) {
+				@media all and (max-width: 1024px) {
+				    a:hover, a:visited {
+					    opacity: 1 !important;
+					    text-decoration: none;
+				    }					
+				}
+
+				@media all and (min-width: 768px) and (max-width: 799px) {
+					@include span-columns(6);
+					@include pad(0);
+					margin-right: 0;
+					width: 49.936%;
+					overflow: hidden;
+					margin-bottom: 80px;
+					border-right: 0;
+					&:nth-child(3n) {
+						border-right: 0;
+					}
+					&:nth-child(2n) {
+							margin-right: 0;
+					}
+					&:nth-child(2n+1) {
+							margin-right: 1px;
+					}
+					&:nth-child(2) {
+						@include reset-display;
+					}
+				    a:hover, a:visited {
+					    opacity: 1 !important;
+					    text-decoration: none;
+				    }
+				}
+
+				@media all and (max-width: 767px) {
 					@include span-columns(6);
 					@include pad(0);
 					margin-right: 0;
 					width: 50%;
-					overflow: visible;
+					overflow: hidden;
 					margin-bottom: 80px;
-					.mobile-only {
-						position: absolute;
-						bottom: -60px;
-						width: 100%;
-						a {
-							opacity: 1;
-							text-decoration: none;
-							&:hover {
-								color: $lt-raisin;
-								opacity: 1;
-							}
-						}
-						h3 {
-							font-size: 2.1875rem;
-							font-family: $body;								
+					border-right: 0;
+					&:nth-child(3n) {
+						border-right: 0;
+					}
+					&:nth-child(2n) {
+						.knockout {
+							border-right: 1px solid #c06718;
 						}
 					}
-				}
-
-				@media all and (max-width: 480px) {
-					@include span-columns(12);
-					@include pad(0);
-					margin-right: 0;
-					width: 100%;
-					
-					.knockout {
-						opacity: 0;
+					&:nth-child(2n+1) {
+						.knockout {
+							border-right: 1px solid $vanilla;
+						}
 					}
-					a {
-						opacity: -0.5;
-					}
+				    a:hover, a:visited {
+					    opacity: 1 !important;
+					    text-decoration: none;
+				    }
 				}
-
 				&:hover {
 					span {
 						transform: scale(1.25);
@@ -559,16 +673,21 @@ body {
 					.knockout {
 					  background-size: cover;
 					  padding: 0;
-					  font-weight: 700;
-					  font-size: 20px;
-					  transition: all 0.5s linear;
+					  font-weight: 400;
+					  font-size: 32px;
+					  line-height: normal;
+					  transition: all 1s linear;
+					  @media all and (max-width: 480px) {
+					  	font-size: 32px;
+					  }
 					}
 					svg {
 					  display: block;
 					}
-				    &:hover {
+				    &:hover, &:visited {
 					    opacity: 0;
-					    transition: all 0.5s linear;
+					    transition: all 1s linear;
+					    text-decoration: none;
 				    }
 				}
 			}
@@ -577,54 +696,107 @@ body {
 	.more-container {
 		ul {
 			li {
+				border-top: 1px solid $vanilla;
+				border-bottom: 1px solid $vanilla;
+				border-right: 1px solid $vanilla;
+				&:nth-child(3n) {
+					border-right: 1px solid $pewter;
+				}				
 				&:last-child {
 					@media all and (max-width: 799px) {
 						display: none;
+					}
+				}
+				@media all and (min-width: 768px) and (max-width: 799px) {
+					@include span-columns(6);
+					@include pad(0);
+					margin-right: 0;
+					width: 49.936%;
+					overflow: hidden;
+					margin-bottom: 80px;
+					border-right: 0;
+					&:nth-child(3n) {
+						border-right: 0;
+					}
+					&:nth-child(2n) {
+							border-right: 1px solid $pewter;
+					}
+					&:nth-child(2n+1) {
+							border-right: 1px solid $vanilla;
+					}
+					&:nth-child(2) {
+						@include reset-display;
+					}
+				    a:hover, a:visited {
+					    opacity: 1 !important;
+					    text-decoration: none;
+				    }
+				}
+
+				@media all and (max-width: 767px) {
+					border-right: 0;
+					&:nth-child(3n) {
+						border-right: 0;
+					}						
+					&:nth-child(2n) {
+						.knockout {
+							border-right: 1px solid $pewter;
+						}
+					}
+					&:nth-child(2n+1) {
+						.knockout {
+							border-right: 1px solid $vanilla;
+						}
 					}
 				}
 			}
 		}
 	}
 	#cta {
-		background: $pale-lavender;
+		background: $vanilla;
 		text-align: center;
 		a {
 			text-decoration: none;
 		    display: inline-block;
 		    padding: 0 24px;
 		    margin: 0 auto 60px auto;
-		    background: $raisin;
-		    color: $pale-lavender;
+		    background: $pewter;
+		    color: $lt-umber;
 		    width: auto;
 		    transition: all 0.5s linear;
 		    letter-spacing: 1px;
 		    h3 {
-			    font-family: $copy;
-				font-size: 16px;
+			    font-family: $title;
+				font-size: 18px;
 				margin: 16px 0;
+				color: #e26d06;
 		    }
 		    &:hover {
-			    background: rgba(68,29,49,.2);
-			    color: $raisin;
+			    background: rgba(70, 70, 69, 0.65);
 			    transition: all 0.5s linear;
 		    }
 		}		
 	}
 	#cta {
 		&.light {
-			background: $raisin;
+			background: $pewter;
 			a {
-			    background: $lt-raisin;
-			    color: $raisin;
+			    background: $lt-umber;
+			    h3 {
+				    color: $pewter;
+				    font-family: $title;
+			    }
 			    &:hover {
-				    background: $pale-lavender;
-				    color: $lt-raisin;
+				    background: $umber;
+				    h3 {
+					    color: $pewter;
+				    }
 			    }
 			}
 		}		
 	}
 	#more-projects {
-		background: $raisin;
+		background: $pewter;
 		padding: 20px 0 0 0;
 		float: left;
 		@include outer-container;
@@ -632,7 +804,7 @@ body {
 		max-width: none;
 		h3 {
 			text-align: center;
-			color: $pale-lavender;
+			color: $vanilla;
 			font-family: $title;
 			font-size: 36px;
 			margin-bottom: 40px;
@@ -660,14 +832,15 @@ body {
 				@include span-columns(12);
 				h2 {
 					font-family: $title;
+					color: $lt-umber;
 				}
 				p, a {
 					font-size: 22px;
 					line-height: 32px;
 				}
 				a {
-					font-weight: 600;
-					color: white;
+					font-weight: 400;
+					color: $pale-lavender;
 					&:hover {
 						color: rgba(255,255,255,.2);
 						text-decoration: none;
@@ -676,7 +849,7 @@ body {
 						display: inline-block;
 						padding: 16px 19px;
 						margin: 37px auto 14px auto;
-						background: white;
+						background: $pale-lavender;
 						color: $red;
 					    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 						font-size: 24px;
@@ -705,10 +878,11 @@ body {
 		float: left;
 		p {
 			text-align: center;
-			font-weight: 600;
+			font-weight: 400;
 			font-size: 12px;
-			color: $pale-lavender;
-			opacity: .5;
+			color: $vanilla;
+			opacity: .6;
+			font-family: $title;
 		}
 	}
 }
@@ -716,9 +890,13 @@ body {
 // Helpers
 
 .mobile-only {
-	display: none;
-	
+	display: none !important;
 	@media all and (max-width: 480px) {
-		display: block;
+		display: block !important;
 	}
+}
+.non-mobile {
+	@media all and (max-width: 480px) {
+		display: none !important;
+	}	
 }
